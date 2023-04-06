@@ -19,7 +19,7 @@ def is_sound_playing() -> bool:
     out = subprocess.check_output("cat /proc/asound/card*/pcm*p/sub*/hw_params", shell=True).decode("utf-8")
     return not ("closed" in out)
 
-is_sound_playing = lambda t=1: bool(time.time() % 2)
+# is_sound_playing = lambda t=1: bool(time.time() % 2)
 
 def main():
     # settings
